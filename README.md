@@ -1,0 +1,1 @@
+# This is the repository for Coding Challenge 6 - Javascript Functions Setup
