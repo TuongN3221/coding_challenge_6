@@ -31,5 +31,18 @@ const calculateBonus = (salary, performanceRating) => {
 console.log(calculateBonus(5000, "Excellent")); // Expected output: "Bonus: $1000"
 console.log(calculateBonus(7000, "Good"));      // Expected output: "Bonus: $700"
 
+// Task 4 - Subscription Pricing Model
+function calculateSubscriptionCost(plan, months, discount = 0) {
+    const subscription = {
+        Basic: 10,
+        Premium: 20,
+        Enterprise: 50
+    };
+    // Calculates the cost of the subscription
+    const cost = months * subscription[plan] - discount;
+    return `Total Cost: $${cost};`
+};
+console.log(calculateSubscriptionCost("Basic", 6, 10)); // Expected output: "Total Cost: $50"
+console.log(calculateSubscriptionCost("Premium", 12, 0)); // Expected output: "Total Cost: $240")
 
 
