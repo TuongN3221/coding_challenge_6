@@ -1,5 +1,6 @@
 // Task 1 - Profit Calculation
 function calculateProfit(costPrice, sellingPrice, unitsSold) {
+    // Calculates the profit
     const profit  = (sellingPrice - costPrice) * unitsSold
 
     return `Total Profit: $${profit}`;
@@ -10,6 +11,7 @@ console.log(calculateProfit(50, 70, 200)); // Expected output: "Total Profit: $4
 
 // Task 2 - Sales Tax Computation
 function calculateSalesTax(amount, taxRate) {
+    // Calculates the sales tax
     const salesTax = amount * taxRate
 
     return `Sales Tax: ${salesTax}`
@@ -20,6 +22,7 @@ console.log(calculateSalesTax(500, 0.1));  // Expected output: "Sales Tax: $50"
 
 // Task 3 - Employee Bonus Calculation
 const calculateBonus = (salary, performanceRating) => {
+    // Sets up percentage bonuses
     const bonusPercent = {
         Excellent: 0.2,
         Good: 0.1,
@@ -33,6 +36,7 @@ console.log(calculateBonus(7000, "Good"));      // Expected output: "Bonus: $700
 
 // Task 4 - Subscription Pricing Model
 function calculateSubscriptionCost(plan, months, discount = 0) {
+    // Sets up subscription pricing
     const subscription = {
         Basic: 10,
         Premium: 20,
@@ -64,3 +68,18 @@ function applyBulkDiscount(orders, discountFunction) {
 // Tests the function 
 let discountedOrders = applyBulkDiscount(orders, amount => amount > 500 ? amount * 0.9 : amount);
 console.log(discountedOrders);// Expected output: [200, 540, 1080, 450, 720]
+
+// Task 7 - Business Expense Tracker
+function createExpenseTracker() {
+    // Initial amount
+    let total = 0;
+    return function (amount) {
+        total += amount;
+        return `Total Expenses: $${total}`;
+    }
+}
+
+let tracker = createExpenseTracker();
+
+console.log(tracker(200));  // Expected output: "Total Expenses: $200"
+console.log(tracker(150));  // Expected output: "Total Expenses: $350"
