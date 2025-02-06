@@ -51,7 +51,7 @@ console.log(calculateSubscriptionCost("Premium", 12, 0)); // Expected output: "T
 
 // Task 5 - Currency Conversion
 function convertCurrency(amount, exchangeRate) {
-    //Computes amount and exchange rate
+    //Calculates amount and exchange rate
     const rate = amount * exchangeRate
     return `Exchanged Amount: $${rate.toFixed(2)}`;
 };
@@ -78,7 +78,7 @@ function createExpenseTracker() {
         return `Total Expenses: $${total}`;
     }
 }
-
+// declares empty tracker amount
 let tracker = createExpenseTracker();
 
 console.log(tracker(200));  // Expected output: "Total Expenses: $200"
@@ -91,7 +91,7 @@ function calculateYearsToPromotion(employeeLevel) {
     if (employeeLevel >= 10) {
         return 0;
     }
-    // If employeeLevel is less than 10, will give years needed to 
+    // If employeeLevel is less than 10, will give years needed to promote based on current level
     return 2 + calculateYearsToPromotion(employeeLevel + 1);
 };
 
